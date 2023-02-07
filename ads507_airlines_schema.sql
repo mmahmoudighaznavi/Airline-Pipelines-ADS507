@@ -4,26 +4,35 @@ use ads507airlines;
 
 #create airlines table for each year
 create table airlines_all2018(
+id integer,
 carrier varchar(2),
 name varchar(80));
 
 create table airlines_all2019(
+id integer,
 carrier varchar(2),
 name varchar(80));
 
 create table airlines_all2020(
+id integer,
 carrier varchar(2),
 name varchar(80));
 
 create table airlines_all2021(
+id integer,
 carrier varchar(2),
 name varchar(80));
 
 create table airlines_all2022(
+id integer,
 carrier varchar(2),
 name varchar(80));
 
-#data import using Data Import Wizard
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2018/airlines_all2018.csv' into table ads507airlines.airlines_all2018 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2019/airlines_all2019.csv' into table ads507airlines.airlines_all2019 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2020/airlines_all2020.csv' into table ads507airlines.airlines_all2020 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2021/airlines_all2021.csv' into table ads507airlines.airlines_all2021 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2022/airlines_all2022.csv' into table ads507airlines.airlines_all2022 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
 
 #create flights tables for each year
 create table flights_all2018(
@@ -136,11 +145,11 @@ hour int,
 minute int,
 time_hour datetime);
 
-load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2018/flights_all2018.csv' into table ads507airlines.flights_all2018 fields terminated by ',' IGNORE 1 LINES;
-load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2019/flights_all2019.csv' into table ads507airlines.flights_all2019 fields terminated by ',' IGNORE 1 LINES;
-load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2020/flights_all2020.csv' into table ads507airlines.flights_all2020 fields terminated by ',' IGNORE 1 LINES;
-load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2021/flights_all2021.csv' into table ads507airlines.flights_all2021 fields terminated by ',' IGNORE 1 LINES;
-load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2022/flights_all2022.csv' into table ads507airlines.flights_all2022 fields terminated by ',' IGNORE 1 LINES;
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2018/flights_all2018.csv' into table ads507airlines.flights_all2018 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2019/flights_all2019.csv' into table ads507airlines.flights_all2019 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES;
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2020/flights_all2020.csv' into table ads507airlines.flights_all2020 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES;
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2021/flights_all2021.csv' into table ads507airlines.flights_all2021 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES;
+load data local infile '/Users/viviando/Desktop/GitHub/ADS507_airlines/data_files/2022/flights_all2022.csv' into table ads507airlines.flights_all2022 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES;
 
 #create weather tables for IAH
 create table weather_IAH2018(
