@@ -5,7 +5,7 @@ use ads507airlines;
 #create airlines table for each year
 create table airlines_all2018(
 id integer,
-carrier varchar(2),
+carrier varchar(4),
 name varchar(80));
 
 create table airlines_all2019(
@@ -28,11 +28,11 @@ id integer,
 carrier varchar(2),
 name varchar(80));
 
-load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2018/airlines_all2018.csv' into table ads507airlines.airlines_all2018 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
-load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2019/airlines_all2019.csv' into table ads507airlines.airlines_all2019 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
-load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2020/airlines_all2020.csv' into table ads507airlines.airlines_all2020 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
-load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2021/airlines_all2021.csv' into table ads507airlines.airlines_all2021 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
-load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2022/airlines_all2022.csv' into table ads507airlines.airlines_all2022 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 LINES ;
+load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2018/airlines_all2018.csv' into table ads507airlines.airlines_all2018 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES ;
+load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2019/airlines_all2019.csv' into table ads507airlines.airlines_all2019 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES ;
+load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2020/airlines_all2020.csv' into table ads507airlines.airlines_all2020 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES ;
+load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2021/airlines_all2021.csv' into table ads507airlines.airlines_all2021 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES ;
+load data local infile 'C:/Users/sfrea/Desktop/ADS507_group_project/data_files/2022/airlines_all2022.csv' into table ads507airlines.airlines_all2022 fields terminated by ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES ;
 
 #create flights tables for each year
 create table flights_all2018(
