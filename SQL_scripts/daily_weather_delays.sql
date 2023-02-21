@@ -1129,6 +1129,11 @@ select * from delays_weather_sea2022;
 ###########################################################
 # creating a union of all years, per airport
 
+drop view if exists delays_weather_iah_ALLYEARS;
+drop view if exists delays_weather_jfk_ALLYEARS;
+drop view if exists delays_weather_san_ALLYEARS;
+drop view if exists delays_weather_sea_ALLYEARS;
+
 create view delays_weather_iah_ALLYEARS as
 select * from delays_weather_iah2018
 union select * from delays_weather_iah2019
