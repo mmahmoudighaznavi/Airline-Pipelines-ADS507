@@ -132,7 +132,7 @@ conn=mysql.connect(host='localhost',
                    db='ads507airlines') #this might need to be db='airlines_full_db' if you directly downloaded the full database
 ```
 
-After establishing the MySQL connection, verify you are able to connect with the following Python code:
+After establishing the MySQL connection, verify you are able to connect with the following Python code (this is also in the notebook):
 ```python
 tableNames = pd.read_sql("""SHOW TABLES""", conn)
 
