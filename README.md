@@ -36,3 +36,10 @@ Data CSV files are organized by year, and includes:
 * Flight data for IAH, JFK, SAN, SEA (one file per year)
 * Weather data for IAH, JFK, SAN, SEA (one file per airport per year)
 * Planes data for IAH, JFK, SAN, SEA (one file per year)
+
+## Deploying the Pipeline
+
+There are three ways set up the database:
+1. Download the **airlines_full_db.sql** file provided in this repository (easiest)
+2. Download the CSV files under **data_files** in this directory and build the database for option (1) above using the SQL scripts under **SQL_scripts/table_creation_scripts** (intermediate)
+3. Start from the R file under **data_files** to download files, perform some light manual editing, then follow option (2) above
