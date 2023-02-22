@@ -1,5 +1,31 @@
 # ADS507 Airlines Project
 
+## Contents of the Repository 
+This repository is organized under the following sub-directories:
+
+* **data_files**
+  * This contains an R script for calling the **anyflights** API and generating CSV tables, plus the CSV files we generated, organized by year
+  * Each year folder contains:
+    * 1 file for airlines data
+    * 1 file for all 20xx flights from IAH, JFK, SAN, SEA airports
+    * 4 files covering weather outputs in 5-minute intervals for the entire year, one for each airport
+* **python_outputs**
+  * Potential deliverables that an end-consumer may want to use or build from
+* **SQL_scripts**
+  * Files for creating the database are located under the table_creation_scripts sub-directory
+  * Files beginning in 0_xxxxx were used to verify working functionality
+  * The other files were for ETL, cleanup, and generating views for multiple endpoint consumers
+    * daily_weather_delays.sql
+    * tables.moh.sql
+    * travelers_delay_info.sql
+    
+We also have the following files in the main view:
+* **airlines_full_db.sql** (and **.gitattributes**)
+  * The entire persistent store SQL database, approximately 710MB
+  * **.gitattributes** is necessary for Git Large File Storage (see documentation [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage))
+* architecture_diagram.mwb
+  * Architecture diagram of the database
+
 ## Data
 
 All data comes from the `anyflights` R package:
