@@ -55,11 +55,11 @@ There are three ways set up the database:
 
 ##### Note 1
 If you choose option 3, you will need to change the working directory in the R file to your own local working directory. You may also need to manually edit the CSV files using a tool like Microsoft Excel or similar, specifically:
-* deleting the first several rows from each *weather_XXX.csv* which only contain commented lines prefixed by "#", causing import errors in MySQL and Python
-* reformatting the datetime objects in each *flights20xx.csv* file
+* deleting the first several rows from each *weather_XXX.csv* file because they only contain comments prefixed by "#", causing import errors in MySQL and Python
+* reformatting the datetime objects in each *weather_XXX.csv*  file
 
 ##### Note 2
-If you choose option 2, you will need to change the working directory to your own local working directory for each of the SQL commands which loads the relevant local data file. For example:
+If you choose option 2, you will need to change the working directory to your own local working directory for each of the SQL commands which loads the relevant local data file. For example, changing the `path/` in:
 ```sql
 LOAD DATA LOCAL INFILE 'path/2018/airlines_all2018.csv' INTO TABLE ads507airlines.airlines_all2018 
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES ;
