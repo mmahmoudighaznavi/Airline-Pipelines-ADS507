@@ -21,7 +21,7 @@ create view monthly_flights_jfk2018 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2018
 WHERE origin='JFK'
-GROUP BY 1,4
+GROUP BY 1,4, 5
 ORDER BY 4,6;
 
 #monthly airlines flight table from San Diego airport with average delay (2018)
@@ -29,7 +29,7 @@ create view monthly_flights_san2018 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2018
 WHERE origin='SAN'
-GROUP BY 1,4
+GROUP BY 1,4, 5
 ORDER BY 4,6;
 
 #monthly airlines flight table from Seatle airport with average delay (2018)
@@ -37,7 +37,7 @@ create view monthly_flights_sea2018 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2018
 WHERE origin='SEA'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly carriers flight table from Houston(IAH) airport with average dep delay (2019)
@@ -45,7 +45,7 @@ create view monthly_flights_iah2019 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2019
 WHERE origin='IAH'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from JFK airport with average delay (2019)
@@ -53,7 +53,7 @@ create view monthly_flights_jfk2019 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2019
 WHERE origin='JFK'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from San Diego airport with average delay (2019)
@@ -61,7 +61,7 @@ create view monthly_flights_san2019 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2019
 WHERE origin='SAN'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from Seatle airport with average delay (2019)
@@ -69,7 +69,7 @@ create view monthly_flights_sea2019 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2019
 WHERE origin='SEA'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly carriers flight table from Houston(IAH) airport with average dep delay (2020)
@@ -77,7 +77,7 @@ create view monthly_flights_iah2020 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2020
 WHERE origin='IAH'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from JFK airport with average delay (2020)
@@ -85,7 +85,7 @@ create view monthly_flights_jfk2020 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2020
 WHERE origin='JFK'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from San Diego airport with average delay (2020)
@@ -93,7 +93,7 @@ create view monthly_flights_san2020 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2020
 WHERE origin='SAN'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from Seatle airport with average delay (2020)
@@ -101,7 +101,7 @@ create view monthly_flights_sea2020 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2020
 WHERE origin='SEA'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly carriers flight table from Houston(IAH) airport with average dep delay (2021)
@@ -109,7 +109,7 @@ create view monthly_flights_iah2021 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2021
 WHERE origin='IAH'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from JFK airport with average delay (2021)
@@ -117,7 +117,7 @@ create view monthly_flights_jfk2021 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2021
 WHERE origin='JFK'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from San Diego airport with average delay (2021)
@@ -125,7 +125,7 @@ create view monthly_flights_san2021 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2021
 WHERE origin='SAN'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from Seatle airport with average delay (2021)
@@ -133,7 +133,7 @@ create view monthly_flights_sea2021 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2021
 WHERE origin='SEA'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly carriers flight table from Houston(IAH) airport with average dep delay (2022)
@@ -141,7 +141,7 @@ create view monthly_flights_iah2022 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2022
 WHERE origin='IAH'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from JFK airport with average delay (2022)
@@ -149,7 +149,7 @@ create view monthly_flights_jfk2022 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2022
 WHERE origin='JFK'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly airlines flight table from San Diego airport with average delay (2022)
@@ -157,7 +157,7 @@ create view monthly_flights_san2022 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2022
 WHERE origin='SAN'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #monthly carriers flight table from Seatle airport with average delay group by carrier (2022)
@@ -165,7 +165,7 @@ create view monthly_flights_sea2022 as
 select carrier, origin, COUNT(carrier) as flightcounts, month , year, ROUND(AVG(dep_delay), 2) as AVGdelay, ROUND(AVG(arr_delay), 2) as AVGarrdelay
 from flights_all2022
 WHERE origin='SEA'
-GROUP BY 1,4
+GROUP BY 1,4,5
 ORDER BY 4,6;
 
 #Yearly total flights group by destination with total delay time.(2018)
