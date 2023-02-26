@@ -18,9 +18,9 @@ This repository is organized under the following sub-directories:
 * **python_outputs**
   * Potential deliverables that an end-consumer may want to use or build from
 * **SQL_scripts**
-  * Files for creating the database are located under the table_creation_scripts sub-directory
+  * Files for creating the database are located under the **table_creation_scripts** sub-directory
   * Files beginning in 0_xxxxx were used to verify working functionality
-  * The other files were for ETL, cleanup, and generating views for multiple endpoint consumers
+  * The other files were for ETL, data cleanup, and generating views for multiple endpoint consumers
     * `daily_weather_delays.sql`
     * `tables.moh.sql`
     * `travelers_delay_info.sql`
@@ -107,6 +107,11 @@ Weather - SEA airport
 * `Weather_sea2021` - 102876 records
 * `Weather_sea2022` - 89112 records
 
+Furthermore, after running all three SQL scripts your database should have 149 tables listed: the 30 original tables ("base tables") and 119 created views. You can verify the number of views with this snippet of SQL:
+```sql
+SELECT count(*) FROM information_schema.`TABLES`  
+WHERE TABLE_TYPE LIKE 'VIEW' AND TABLE_SCHEMA LIKE 'ads507airlines';
+```
 
 ### Step 3: Running the Outputs
 
